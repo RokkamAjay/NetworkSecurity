@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/rokka/OneDrive/Desktop/NETWORKSECURITY/mlruns/508560694135847384/8d0937901ee749ec805e294c587efedc/artifacts
+end_time: 1790095416825
+entry_point_name: ''
+experiment_id: '508560694135847384'
+lifecycle_stage: active
+run_id: 8d0937901ee749ec805e294c587efedc
+run_name: funny-bug-709
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1790095413625
+status: 4
+tags: []
+user_id: rokka

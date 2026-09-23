@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/rokka/OneDrive/Desktop/NETWORKSECURITY/mlruns/508560694135847384/models/m-7d3b8a3f950148b7a9cbb7e29d02d9ee/artifacts
+creation_timestamp: 1790095413791
+experiment_id: '508560694135847384'
+last_updated_timestamp: 1790095416800
+model_id: m-7d3b8a3f950148b7a9cbb7e29d02d9ee
+model_type: null
+name: model
+source_run_id: 8d0937901ee749ec805e294c587efedc
+status: 3
+status_message: null
