@@ -24,6 +24,14 @@ from sklearn.ensemble import (
 )
 
 import mlflow
+import dagshub
+dagshub.init(
+    repo_owner="RokkamAjay",
+    repo_name="NetworkSecurity",
+    mlflow=True
+)
+
+mlflow.set_experiment("NetworkSecurity")
 
 # Allow MLflow filesystem tracking
 # os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
@@ -34,8 +42,8 @@ import mlflow
 # # MLflow experiment
 # mlflow.set_experiment("NetworkSecurity")
 
-mlflow.set_tracking_uri("sqlite:///mlflow.db")
-mlflow.set_experiment("NetworkSecurity")
+# mlflow.set_tracking_uri("sqlite:///mlflow.db")  ----> used for local server only 
+# mlflow.set_experiment("NetworkSecurity")
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -129,6 +137,8 @@ class ModelTrainer:
 
         Network_Model = NetworkModel(preprocessor=preprocessor,model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
+
+        save_object("final_model/model.pkl",best_model)
 
         ### ModelTrainner Artifact
         model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
